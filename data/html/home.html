@@ -1,0 +1,16 @@
+<html>
+<body>
+<p>Html Games:</p>
+{% for item in html%}
+<p><a href="/html?id={{item.id}}">{{item.id}}</a></p>
+{% else %}
+<p>None Found</p>
+{% endfor %}
+<p>Scratch Games:</p>
+{% for item in scratch %}
+<p><a href="/scratch?id={{item.id}}">{{item.name}}</a></p>
+{% else %}
+<p>None Found</p>
+{% endfor %}
+</body>
+</html>

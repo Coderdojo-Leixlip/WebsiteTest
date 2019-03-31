@@ -1,0 +1,25 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Nothing here. Nice try at finding out what this is.",
+  "main": "main.js",
+  "scripts": {
+    "test": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Coderdojo-Leixlip/WebsiteTest.git"
+  },
+  "author": "Jake Feeney and more coming soon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Coderdojo-Leixlip/WebsiteTest/issues"
+  },
+  "homepage": "https://github.com/Coderdojo-Leixlip/WebsiteTest#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nedb": "^1.8.0",
+    "nunjucks": "^3.2.0",
+    "request": "^2.88.0"
+  }
+}
