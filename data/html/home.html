@@ -12,5 +12,11 @@
 {% else %}
 <p>None Found</p>
 {% endfor %}
+<p>Html Pages:</p>
+{% for item in users%}
+<p><a href="/ninjas/{{item.link0}}">{{item.id}}</a></p>
+{% else %}
+<p>None Found</p>
+{% endfor %}
 </body>
 </html>

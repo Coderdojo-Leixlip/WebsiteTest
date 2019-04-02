@@ -8,6 +8,9 @@ const PORT = 8080;
 const app = express();
 htmldb= new Datastore({filename:path.join(__dirname, 'data/dbs/html.db'), autoload: true})
 scratchdb= new Datastore({filename:path.join(__dirname, 'data/dbs/scratch.db'), autoload: true})
+userdb= new Datastore({filename:path.join(__dirname, 'data/dbs/users.db'), autoload: true})
+
+app.use(express.static(path.join(__dirname, 'data')))
 
 nunjucks.configure(path.join('data', 'html'), {
 	autoescape: true,
@@ -18,7 +21,10 @@ app.get('/', (req,res) => {
 		var html = docs;
 		scratchdb.find({}, (err,docs) =>{
 			var scratch = docs;
-			res.render("home.html", {html: html, scratch: scratch});
+			userdb.find({}, (err,docs) => {
+				var users=docs
+				res.render("home.html", {html: html, scratch: scratch, users: users});
+			})
 	});
 	});
 	
