@@ -1,0 +1,12 @@
+@font-face {
+	font-family: "ARCADECLASSIC";
+	src: url('/fonts/ARCADECLASSIC.TTF');
+}
+body {
+  font-family: ARCADECLASSIC;
+  color: #00ff00;
+  background-color: #000000;
+}
+a {
+  color:#00ff00;
+}

@@ -1,5 +1,10 @@
 <html>
+<head>
+<title>LPTCDojo</title>
+<link rel="stylesheet" href="/css/hacker.css">
+</head>
 <body>
+<div>
 <p>Html Games:</p>
 {% for item in html%}
 <p><a href="/html?id={{item.id}}">{{item.id}}</a></p>
@@ -18,5 +23,7 @@
 {% else %}
 <p>None Found</p>
 {% endfor %}
+</font>
+</div>
 </body>
 </html>
