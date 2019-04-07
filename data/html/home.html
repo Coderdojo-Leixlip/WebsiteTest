@@ -7,19 +7,21 @@
 <div>
 <p>Html Games:</p>
 {% for item in html%}
-<p><a href="/html?id={{item.id}}">{{item.id}}</a></p>
+<p><a href="/html?id={{item.id}}">> {{item.id}}</a></p>
 {% else %}
 <p>None Found</p>
 {% endfor %}
+<br>
 <p>Scratch Games:</p>
 {% for item in scratch %}
-<p><a href="/scratch?id={{item.id}}">{{item.name}}</a></p>
+<p><a href="/scratch?id={{item.id}}">> {{item.name}}</a></p>
 {% else %}
 <p>None Found</p>
 {% endfor %}
+<br>
 <p>Html Pages:</p>
 {% for item in users%}
-<p><a href="/ninjas/{{item.link0}}">{{item.id}}</a></p>
+<p><a href="/ninjas/{{item.link0}}">> {{item.id}}</a></p>
 {% else %}
 <p>None Found</p>
 {% endfor %}
