@@ -4,7 +4,6 @@ const path = require('path');
 const request = require('request');
 const Datastore = require('nedb');
 
-const PORT = 8080;
 const app = express();
 htmldb= new Datastore({filename:path.join(__dirname, 'data/dbs/html.db'), autoload: true})
 scratchdb= new Datastore({filename:path.join(__dirname, 'data/dbs/scratch.db'), autoload: true})
@@ -39,7 +38,7 @@ app.get('/html', (req,res) => {
 	})
 	
 })
-const server = app.listen(PORT, () =>{
+const server = app.listen(process.env.PORT || 5000, () =>{
 	console.log("Running")
 	console.log(server.address());
 })
