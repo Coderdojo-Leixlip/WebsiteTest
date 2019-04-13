@@ -1,9 +1,9 @@
 @font-face {
-	font-family: "ARCADECLASSIC";
-	src: url('/fonts/ARCADECLASSIC.TTF');
+	font-family: "PressStart2p";
+	src: url('/fonts/PressStart2p.ttf');
 }
 body {
-  font-family: ARCADECLASSIC;
+  font-family: PressStart2p;
   color: #00ff00;
   background-color: #000000;
 }
