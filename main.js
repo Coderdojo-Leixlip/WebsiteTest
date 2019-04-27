@@ -3,6 +3,7 @@ const nunjucks = require('nunjucks');
 const path = require('path');
 const request = require('request');
 const Datastore = require('nedb');
+const fs = require('fs');
 
 const app = express();
 htmldb= new Datastore({filename:path.join(__dirname, 'data/dbs/html.db'), autoload: true})
@@ -37,6 +38,19 @@ app.get('/html', (req,res) => {
 		res.render("htmlgame.html", {link0: docs[0].link0})
 	})
 	
+})
+app.get('/list', (req,res) => {
+	var dir = req.query.dir;
+	console.log(dir);
+	fs.readdir(path.join(__dirname,dir), (err,files) => {
+		console.log(files);
+		console.log(err);
+		if (err) {
+			res.send(err);
+		} else {
+			res.send(files);
+		}
+	})
 })
 app.get("*", (req,res) => {
 	res.sendFile(path.join(__dirname,"data","html", "/error.html"))
